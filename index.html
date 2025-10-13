@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وجهتك التقنية الأولى</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+      <svg
+        class="sun-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg
+        class="moon-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+    <!-- start the navbar -->
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <img src="./images/logo.png" alt="logo Img" id="logo" />
+        </div>
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="القائمة"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="list" id="navList">
+          <ul>
+            <li><a href="#hero" class="link active">الرئيسية</a></li>
+            <li><a href="#about" class="link">عنا</a></li>
+            <li><a href="#services" class="link">خدماتنا</a></li>
+            <li><a href="#product" class="link">منتجاتنا</a></li>
+            <li><a href="#contact" class="link">تواصل معنا </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end the navbar -->
+    <!-- start the hero section -->
+    <section class="section" id="hero">
+      <div class="container">
+        <div class="hero-center">
+          <h1 class="hero-title">وجهتك التقنية الأولى</h1>
+          <h3 class="hero-subtitle">نقدم لك أفضل الحلول التقنية المتكاملة</h3>
+          <div class="hero-btn">
+            <a href="#" class="btn btn-primary">استكشف خدماتنا</a>
+            <a href="#" class="btn btn-secondary">تواصل معنا</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end the hero section -->
+    <!-- start the about section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-text">
+          <div class="about-title">
+            <h1>عنّا</h1>
+          </div>
+          <div class="about-p">
+            <p>
+              <span>وجهتك التقنية الأولى </span> نقدم لك أفضل الحلول التقنية
+              المتكاملة استكشف خدماتنا وتواصل معنا نحن فريق تقني متنقل متخصص في
+              تقديم الحلول التقنية المتكاملة. نسعى لتقديم أفضل الخدمات في مجال
+              صيانة الأجهزة وتطويرها وبيع التطبيقات والألعاب. خبرتنا الواسعة
+              تمكننا من تلبية جميع احتياجاتكم التقنية بكفاءة عالية واحترافية.
+              نؤمن بأن التقنية يجب أن تكون في متناول الجميع، ولذلك نقدم خدماتنا
+              بأسعار تنافسية وجودة عالية. فريقنا متاح دائماً لخدمتكم وتلبية
+              احتياجاتكم في أي وقت وأي مكان.
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="card">
+              <span>🚀</span>
+              <h3>سرعة في الأداء</h3>
+              <p>نقدم خدماتنا بسرعة وكفاءة عالية</p>
+            </div>
+            <div class="card">
+              <span>🔧</span>
+              <h3>خبرة واحترافية</h3>
+              <p>فريق متخصص بخبرة واسعة</p>
+            </div>
+            <div class="card">
+              <span>💎</span>
+              <h3>جودة عالية</h3>
+              <p>نضمن أفضل جودة في جميع خدماتنا</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end the about section -->
+    <!-- start the services section -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="services-text">
+          <h1>خدماتنا</h1>
+          <br />
+          <p>نقدم مجموعة متنوعة من الخدمات التقنية المتخصصة</p>
+        </div>
+        <div class="services-cards">
+          <div class="card">
+            <div class="head">
+              <span>💻</span>
+              <h2>صيانة Software</h2>
+            </div>
+            <div class="center">
+              <p>ترقية وتحديث مكونات الحاسوب لتحسين الأداء والكفاءة</p>
+            </div>
+            <div class="footer">
+              <div class="slider">
+                <img
+                  src="./images/soft1.jpg"
+                  alt="صيانة سوفتوير 1"
+                  class="slider-image"
+                  data-current="1"
+                />
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn next" data-slider="slider1">❯</button>
+                <button class="slider-btn prev" data-slider="slider1">❮</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <span>🔧</span>
+              <h2>صيانة Hardware</h2>
+            </div>
+            <div class="center">
+              <p>إصلاح وصيانة جميع مكونات الأجهزة الإلكترونية والحواسيب</p>
+            </div>
+            <div class="footer">
+              <div class="slider">
+                <img
+                  src="./images/hard1.jpg"
+                  alt="صيانة هاردوير 1"
+                  class="slider-image"
+                  data-current="1"
+                />
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn next" data-slider="slider1">❯</button>
+                <button class="slider-btn prev" data-slider="slider1">❮</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <span>⚙️</span>
+              <h2>تطوير وتبديل قطع الحاسوب</h2>
+            </div>
+            <div class="center">
+              <p>
+                نقدم خدمات صيانة وإصلاح البرمجيات وأنظمة التشغيل بكفاءة عالية
+              </p>
+            </div>
+            <div class="footer">
+              <div class="slider">
+                <img
+                  src="./images/dev1.jpg"
+                  alt=" تطوير وتبديل 1"
+                  class="slider-image"
+                  data-current="1"
+                />
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn next" data-slider="slider1">❯</button>
+                <button class="slider-btn prev" data-slider="slider1">❮</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <span>💸</span>
+              <h2>بيع أجهزة</h2>
+            </div>
+            <div class="center">
+              <p>بيع جميع أنواع الملحقات و الأجهزة</p>
+            </div>
+            <div class="footer">
+              <div class="slider">
+                <img
+                  src="./images/dive1.jpg"
+                  alt=" بيع أجهزة وملحقات"
+                  class="slider-image"
+                  data-current="1"
+                />
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn next" data-slider="slider1">❯</button>
+                <button class="slider-btn prev" data-slider="slider1">❮</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <span>🛒</span>
+              <h2>تحميل تطبيقات</h2>
+            </div>
+            <div class="center">
+              <p>تحميل مختلف التطبيقات</p>
+            </div>
+            <div class="footer">
+              <div class="slider">
+                <img
+                  src="./images/app1.jpg"
+                  alt=" تحميل تطبيقات"
+                  class="slider-image"
+                  data-current="1"
+                />
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn next" data-slider="slider1">❯</button>
+                <button class="slider-btn prev" data-slider="slider1">❮</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <span>🎮</span>
+              <h2>تحميل ألعاب</h2>
+            </div>
+            <div class="center">
+              <p>تحميل ألعاب + محاكيات</p>
+            </div>
+            <div class="footer">
+              <div class="slider">
+                <img
+                  src="./images/games1.jpg"
+                  alt=" تحميل ألعاب"
+                  class="slider-image"
+                  data-current="1"
+                />
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn next" data-slider="slider1">❯</button>
+                <button class="slider-btn prev" data-slider="slider1">❮</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end the services section -->
+    <!-- start the products section -->
+    <section class="section" id="product">
+      <div class="container">
+        <div class="product-text">
+          <h1>منتجاتنا</h1>
+          <br />
+          <p>تصفح مجموعة مختارة من أفضل الأجهزة المتوفرة لدينا</p>
+        </div>
+        <div class="product-cards">
+          <div class="card">
+            <div class="head">
+              <img src="./images/lap1.jpg" alt="" />
+            </div>
+            <div class="center">
+              <h2>Dell XPS 15</h2>
+              <ul>
+                <li>
+                  <p>المعالج :</p>
+                  <p>intel core i7</p>
+                </li>
+                <li>
+                  <p>الذاكرة :</p>
+                  <p>512GB SSD</p>
+                </li>
+                <li>
+                  <p>RAM :</p>
+                  <p>16GB DDR5</p>
+                </li>
+                <li>
+                  <p>كرت الشاشة :</p>
+                  <p>NVIDIA RTX 3050</p>
+                </li>
+              </ul>
+            </div>
+            <div class="footer">
+              <button class="btn-primary btn-product">استفسر الآن</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <img src="./images/lap1.jpg" alt="" />
+            </div>
+            <div class="center">
+              <h2>Dell XPS 15</h2>
+              <ul>
+                <li>
+                  <p>المعالج :</p>
+                  <p>intel core i7</p>
+                </li>
+                <li>
+                  <p>الذاكرة :</p>
+                  <p>512GB SSD</p>
+                </li>
+                <li>
+                  <p>RAM :</p>
+                  <p>16GB DDR5</p>
+                </li>
+                <li>
+                  <p>كرت الشاشة :</p>
+                  <p>NVIDIA RTX 3050</p>
+                </li>
+              </ul>
+            </div>
+            <div class="footer">
+              <button class="btn-primary btn-product">استفسر الآن</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <img src="./images/lap1.jpg" alt="" />
+            </div>
+            <div class="center">
+              <h2>Dell XPS 15</h2>
+              <ul>
+                <li>
+                  <p>المعالج :</p>
+                  <p>intel core i7</p>
+                </li>
+                <li>
+                  <p>الذاكرة :</p>
+                  <p>512GB SSD</p>
+                </li>
+                <li>
+                  <p>RAM :</p>
+                  <p>16GB DDR5</p>
+                </li>
+                <li>
+                  <p>كرت الشاشة :</p>
+                  <p>NVIDIA RTX 3050</p>
+                </li>
+              </ul>
+            </div>
+            <div class="footer">
+              <button class="btn-primary btn-product">استفسر الآن</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end the products section -->
+    <!-- start the contact section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-text">
+          <h1>تواصل معنا</h1>
+          <br />
+          <p>نحن هنا للإجابة على جميع استفساراتكم</p>
+        </div>
+        <div class="contact-info">
+          <div class="right">
+            <h2>معلومات التواصل</h2>
+            <br />
+            <p>يمكنكم التواصل معنا عبر القنوات التالية:</p>
+            <ul>
+              <li>
+                <h2>📧</h2>
+                <div class="li-edit">
+                  <h3>البريد الاكتروني :</h3>
+                  <p>info@techfirst.com</p>
+                </div>
+              </li>
+              <li>
+                <h2>📱</h2>
+                <div class="li-edit">
+                  <h3>الهاتف :</h3>
+                  <p>+963 000 111 222</p>
+                </div>
+              </li>
+              <li>
+                <h2>📍</h2>
+                <div class="li-edit">
+                  <h3>الموقع :</h3>
+                  <p>سوريا ، طرطوس</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="left">
+            <h2>تابعنا على</h2>
+            <div class="social-logos">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                class="social-card facebook"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+                <span>Facebook</span>
+              </a>
+
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="social-card instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+                <span>Instagram</span>
+              </a>
+
+              <a
+                href="https://wa.me/964123456789"
+                target="_blank"
+                class="social-card whatsapp"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                  />
+                </svg>
+                <span> واتساب شخصي</span>
+              </a>
+
+              <a
+                href="https://whatsapp.com/channel/0029VaFj1234567890"
+                target="_blank"
+                class="social-card whatsapp-channel"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                  />
+                </svg>
+                <span>قناة واتساب</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end the contact section -->
+    <!-- start the footer section -->
+    <section class="section" id="footer">
+      <div class="container">
+        <div class="summary">
+          <ul>
+            <li>
+              <h3>وجهتك التقنية الأولى</h3>
+              <p>
+                نقدم لكم أفضل الحلول التقنية المتكاملة بكفاءة واحترافية عالية
+              </p>
+            </li>
+            <li>
+              <h3>روابط سريعة</h3>
+              <p><a href="#hero">الرئيسية</a></p>
+              <p><a href="#about">عنا</a></p>
+              <p><a href="#services">خدماتنا</a></p>
+              <p><a href="#product">منتجاتنا</a></p>
+            </li>
+            <li>
+              <h3>ساعات العمل</h3>
+              <p>الجمعة: 2:00 م - 9:00 م</p>
+              <p>السبت - الخميس: 9:00 ص - 9:00 م</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>Created by: Aubai.Dev</p>
+        <p>Owned by: Ahmad Mohammad</p>
+        <p>© 2025 وجهتك التقنية الأولى. جميع الحقوق محفوظة.</p>
+      </div>
+    </section>
+    <!-- end the footer section -->
+    <script src="src/script.js"></script>
+  </body>
+</html>
