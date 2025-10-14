@@ -196,10 +196,7 @@ nav {
 
 #hero {
   min-height: 500px;
-  background-image: url("../images/img.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--accent-primary);
   padding: 100px 0 50px 0;
   margin-top: 70px;
 }
