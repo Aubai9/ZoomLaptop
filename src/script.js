@@ -19,102 +19,137 @@ links.forEach((link) => {
   });
 });
 
-// // Theme Toggle Functionality
-// const themeToggle = document.getElementById("themeToggle");
-// const sunIcon = document.querySelector(".sun-icon");
-// const moonIcon = document.querySelector(".moon-icon");
+// ===== Mobile Menu Toggle =====
+const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+const navLinks = document.getElementById("navList");
 
-// // Check for saved theme preference or default to 'light'
-// const currentTheme = localStorage.getItem("theme") || "light";
-// document.documentElement.setAttribute("data-theme", currentTheme);
+mobileMenuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 
-// // Update icon visibility based on current theme
-// if (currentTheme === "dark") {
-//   sunIcon.style.display = "block";
-//   moonIcon.style.display = "none";
-// } else {
-//   sunIcon.style.display = "none";
-//   moonIcon.style.display = "block";
-// }
+  // Animate hamburger menu
+  const spans = mobileMenuToggle.querySelectorAll("span");
+  if (navLinks.classList.contains("active")) {
+    spans[0].style.transform = "rotate(45deg) translateY(10px)";
+    spans[1].style.opacity = "0";
+    spans[2].style.transform = "rotate(-45deg) translateY(-10px)";
+  } else {
+    spans[0].style.transform = "none";
+    spans[1].style.opacity = "1";
+    spans[2].style.transform = "none";
+  }
+});
 
-// themeToggle.addEventListener("click", () => {
-//   const theme = document.documentElement.getAttribute("data-theme");
-//   const newTheme = theme === "light" ? "dark" : "light";
+// Close mobile menu when clicking on a link
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    const spans = mobileMenuToggle.querySelectorAll("span");
+    spans[0].style.transform = "none";
+    spans[1].style.opacity = "1";
+    spans[2].style.transform = "none";
+  });
+});
 
-//   document.documentElement.setAttribute("data-theme", newTheme);
-//   localStorage.setItem("theme", newTheme);
+// Add animation on scroll
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px",
+};
 
-//   // Toggle icon visibility
-//   if (newTheme === "dark") {
-//     sunIcon.style.display = "block";
-//     moonIcon.style.display = "none";
-//   } else {
-//     sunIcon.style.display = "none";
-//     moonIcon.style.display = "block";
-//   }
-// });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+}, observerOptions);
 
-// // Image Slider Functionality
-// const sliderButtons = document.querySelectorAll(".slider-btn");
+// Observe all cards
+document.querySelectorAll(".card").forEach((card) => {
+  card.style.opacity = "0";
+  card.style.transform = "translateY(20px)";
+  card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+  observer.observe(card);
+});
 
-// sliderButtons.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     const sliderImage = button
-//       .closest(".footer")
-//       .querySelector(".slider-image");
-//     const currentIndex = parseInt(sliderImage.getAttribute("data-current"));
-//     const imageSrc = sliderImage.src;
-//     const baseImagePath = imageSrc.substring(0, imageSrc.lastIndexOf("/") + 1);
-//     const imageName = imageSrc.substring(imageSrc.lastIndexOf("/") + 1);
-//     const imageBaseName = imageName.replace(/\d+\./, "");
-//     const imagePrefix = imageName.match(/[a-z]+/i)[0];
+// Image Slider Functionality
+const sliderButtons = document.querySelectorAll(".slider-btn");
 
-//     let newIndex;
-//     if (button.classList.contains("next")) {
-//       newIndex = currentIndex === 3 ? 1 : currentIndex + 1;
-//     } else {
-//       newIndex = currentIndex === 1 ? 3 : currentIndex - 1;
-//     }
+sliderButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const sliderImage = button
+      .closest(".footer")
+      .querySelector(".slider-image");
+    const currentIndex = parseInt(sliderImage.getAttribute("data-current"));
+    const imageSrc = sliderImage.src;
+    const baseImagePath = imageSrc.substring(0, imageSrc.lastIndexOf("/") + 1);
+    const imageName = imageSrc.substring(imageSrc.lastIndexOf("/") + 1);
+    const imageBaseName = imageName.replace(/\d+\./, "");
+    const imagePrefix = imageName.match(/[a-z]+/i)[0];
 
-//     sliderImage.src = `${baseImagePath}${imagePrefix}${newIndex}.jpg`;
-//     sliderImage.setAttribute("data-current", newIndex);
-//   });
-// });
+    let newIndex;
+    if (button.classList.contains("next")) {
+      newIndex = currentIndex === 2 ? 1 : currentIndex + 1;
+    } else {
+      newIndex = currentIndex === 1 ? 2 : currentIndex - 1;
+    }
 
-// // Smooth Scrolling for Navigation Links
-// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-//   anchor.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     const target = document.querySelector(this.getAttribute("href"));
-//     if (target) {
-//       const offsetTop = target.offsetTop - 70; // Account for fixed navbar
-//       window.scrollTo({
-//         top: offsetTop,
-//         behavior: "smooth",
-//       });
-//     }
-//   });
-// });
+    sliderImage.src = `${baseImagePath}${imagePrefix}${newIndex}.jpg`;
+    sliderImage.setAttribute("data-current", newIndex);
+  });
+});
 
-// // Add animation on scroll
-// const observerOptions = {
-//   threshold: 0.1,
-//   rootMargin: "0px 0px -50px 0px",
-// };
+// Theme Toggle Functionality
+const themeToggle = document.getElementById("themeToggle");
+const sunIcon = document.querySelector(".sun-icon");
+const moonIcon = document.querySelector(".moon-icon");
+const sections = document.querySelectorAll(".section");
 
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       entry.target.style.opacity = "1";
-//       entry.target.style.transform = "translateY(0)";
-//     }
-//   });
-// }, observerOptions);
+// Check for saved theme preference or default to 'light'
+const currentTheme = localStorage.getItem("theme") || "light";
+document.documentElement.setAttribute("data-theme", currentTheme);
 
-// // Observe all cards
-// document.querySelectorAll(".card").forEach((card) => {
-//   card.style.opacity = "0";
-//   card.style.transform = "translateY(20px)";
-//   card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-//   observer.observe(card);
-// });
+// Update icon visibility based on current theme
+if (currentTheme === "dark") {
+  sunIcon.style.display = "block";
+  moonIcon.style.display = "none";
+} else {
+  sunIcon.style.display = "none";
+  moonIcon.style.display = "block";
+}
+
+themeToggle.addEventListener("click", () => {
+  const theme = document.documentElement.getAttribute("data-theme");
+  const newTheme = theme === "light" ? "dark" : "light";
+
+  document.documentElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+
+  sections.forEach((section) => {
+    section.style.backgroundColor = ``;
+  });
+
+  // Toggle icon visibility
+  if (newTheme === "dark") {
+    sunIcon.style.display = "block";
+    moonIcon.style.display = "none";
+  } else {
+    sunIcon.style.display = "none";
+    moonIcon.style.display = "block";
+  }
+});
+
+// button product asking
+const msg = document.querySelector(".contact-msg");
+const productBtns = document.querySelectorAll(".btn-product");
+productBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    setTimeout(() => {
+      msg.style.display = "block";
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 3000);
+    }, 500);
+  });
+});
