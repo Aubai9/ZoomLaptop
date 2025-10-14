@@ -37,7 +37,7 @@
   --text-secondary: #b0b0b0;
   --accent-primary: #9b59b6;
   --accent-secondary: #6c3483;
-  --accent-light: #2d1b3d;
+  --accent-light: #622494;
   --border-color: #2a2a2a;
   --shadow: rgba(155, 89, 182, 0.2);
   --shadow-hover: rgba(155, 89, 182, 0.3);
@@ -196,7 +196,10 @@ nav {
 
 #hero {
   min-height: 500px;
-  background-color: var(--accent-secondary);
+  background-image: url("../images/img.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 100px 0 50px 0;
   margin-top: 70px;
 }
