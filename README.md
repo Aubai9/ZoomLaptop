@@ -10,14 +10,13 @@ This project was developed to showcase various laptop models with a sleek and us
 ### 📸 Screenshots
 <!Screenshots screenshot.png -->
 ![Project Screenshot](./screenshot.jpg) 
-*(Note: If you haven't uploaded an image yet, you can remove this line until you do)*
 
 ---
 
 ### 🛠️ Technologies Used
 *   **HTML5** (Semantic Structure)
 *   **CSS3** (Styling, Flexbox/Grid, Responsive Design)
-*   **JavaScript** (For interactive elements)
+*   **JavaScript** (For interactive Note)
 *   **Vercel** (Hosting & Deployment)
 
 ---
